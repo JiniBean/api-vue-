@@ -1,0 +1,33 @@
+#개발용
+# spring:
+#   servlet:
+#     multipart:
+#       max-file-size: 100MB #파일 최대 용량
+#       max-request-size: 200MB #받을 파일 용량
+server:
+  port: 8080
+
+  servlet:
+    session:
+      timeout: 1m
+
+spring:
+  #DB datasource
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://db.newlecture.com:3306/rlanddb?serverTimezone=Asia/Seoul&amp;characterEncoding=UTF-8
+    username: rland
+    password: 20231110
+
+
+#logging:
+#  level:
+#    kr:
+#      co:
+#        rland:
+#          web:
+#            repository: TRACE
+
+
+    
+  
