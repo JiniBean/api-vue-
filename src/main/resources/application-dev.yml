@@ -12,6 +12,14 @@ server:
       timeout: 1m
 
 spring:
+  # JPA logging을 위한 추가 설정 -> yml 버전
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
+
   #DB datasource
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
@@ -20,13 +28,17 @@ spring:
     password: 20231110
 
 
-#logging:
-#  level:
-#    kr:
-#      co:
-#        rland:
-#          web:
-#            repository: TRACE
+
+
+
+logging:
+  level:
+    kr:
+      co:
+        rland:
+          api:
+            repository: TRACE
+
 
 
     
