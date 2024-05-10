@@ -19,6 +19,7 @@ public class MenuController {
     @Autowired
     private MenuRepository repository;
 
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping
     public List<Menu> list(
             @RequestParam(name = "p", required = false, defaultValue = "0") Integer page
