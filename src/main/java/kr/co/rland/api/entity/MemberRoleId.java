@@ -1,24 +1,18 @@
 package kr.co.rland.api.entity;
 
-import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.IdClass;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@IdClass(MemberRoleId.class)
-public class MemberRole {
-    @Id
+public class MemberRoleId implements Serializable {
     private Long id;
-    @Id
     private Long memberId;
-    private String roleName;
-
 }
